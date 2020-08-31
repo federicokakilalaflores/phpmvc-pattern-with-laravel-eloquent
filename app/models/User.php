@@ -1,12 +1,9 @@
 <?php
 
-	class User {
-		
-		public $name;
-		public $age;
+	use Illuminate\Database\Eloquent\Model as Eloquent; 
 
-		public function printData(){
-			echo $this->name . " " . $this->age;
-		}
+	class User extends Eloquent{
+		
+		protected $fillable = ["firstname", "lastname"];
 
 	}
